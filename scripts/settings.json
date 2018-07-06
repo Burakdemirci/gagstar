@@ -1,10 +1,12 @@
 {
 	"config": {
 		"theme": {
-			"currentTheme": "defaultTheme",
+			"currentTheme": "gagstarTheme",
 			"themes": [
-				"defaultTheme"
-			]
+				"defaultTheme",
+				"gagstarTheme"
+			],
+			"baseTheme": "gagstarTheme"
 		},
 		"version": "6.9.0"
 	}

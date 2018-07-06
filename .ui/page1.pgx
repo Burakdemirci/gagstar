@@ -8,9 +8,7 @@
 				"children": [
 					"42b807d1",
 					"b7d28cff",
-					"845d2004",
-					"980522a9",
-					"d0fa9c62"
+					"b7a2-ed39-aa75-0440"
 				],
 				"isRemovable": true,
 				"name": "page1",
@@ -19,6 +17,7 @@
 			},
 			"type": "Page",
 			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"flexProps": {
 					"justifyContent": "SPACE_AROUND"
 				},
@@ -50,130 +49,186 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "e891b86d",
-				"title": "page1"
+				"title": "GAG ~ STAR"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "page1",
+				"backgroundColor": "rgba( 255, 255, 255, 0 )",
+				"title": "GAG ~ STAR",
 				"titleColor": "rgba( 0, 0, 0, 1 )",
 				"visible": true
 			}
 		},
 		{
-			"className": ".label",
-			"id": "980522a9",
-			"props": {
-				"children": [],
-				"name": "lbl",
-				"parent": "e891b86d",
-				"usePageVariable": true
-			},
-			"type": "Label",
-			"userProps": {
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20
-				},
-				"height": 90,
-				"multiline": true,
-				"textAlignment": "MIDCENTER",
-				"usePageVariable": true,
-				"width": null
-			}
-		},
-		{
-			"className": ".imageView",
-			"id": "845d2004",
-			"props": {
-				"children": [],
-				"name": "img",
-				"parent": "e891b86d"
-			},
-			"type": "ImageView",
-			"userProps": {
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20
-				},
-				"height": 60,
-				"image": "smartface.png",
-				"width": null
-			}
-		},
-		{
 			"className": ".flexLayout",
-			"id": "d0fa9c62",
+			"id": "b7a2-ed39-aa75-0440",
 			"props": {
 				"children": [
-					"48653d59",
-					"4608e562"
+					"b53c-01c0-624f-3380",
+					"8306-290c-e1d3-2649",
+					"7388-8994-0e4d-0c5e",
+					"90a3-f3c2-224c-23f0",
+					"72bd-5bab-17ad-4d18",
+					"b7c7-7577-d236-b317",
+					"2664-7fe4-1c86-1c29",
+					"e1f5-dbab-e1ff-5724"
 				],
-				"name": "flexlayout",
+				"name": "flexLayout1",
 				"parent": "e891b86d",
 				"usePageVariable": true
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
+				"backgroundColor": "rgba( 249, 249, 250, 1 )",
 				"flexProps": {
-					"justifyContent": "SPACE_BETWEEN",
-					"alignSelf": "STRETCH",
-					"marginLeft": 20,
-					"marginRight": 20
+					"alignSelf": "AUTO",
+					"alignItems": "FLEX_START",
+					"flexDirection": "ROW",
+					"flexWrap": "WRAP",
+					"alignContent": "FLEX_START",
+					"justifyContent": "SPACE_AROUND"
 				},
-				"height": 145,
-				"marginLeft": null,
-				"marginRight": null,
-				"marginTop": 10,
-				"paddingBottom": 15,
+				"height": 517.2108402958622,
+				"left": -15,
 				"usePageVariable": true,
-				"width": null
+				"width": 397.9791429307725
 			}
 		},
 		{
-			"className": ".button",
-			"id": "48653d59",
+			"className": ".imageView",
+			"id": "b53c-01c0-624f-3380",
 			"props": {
 				"children": [],
-				"name": "btn",
-				"parent": "d0fa9c62",
-				"text": "Click me!",
+				"name": "imageView1",
+				"parent": "b7a2-ed39-aa75-0440",
 				"usePageVariable": true
 			},
-			"type": "Button",
+			"type": "ImageView",
 			"userProps": {
-				"font": {
-					"color": "rgba( 255, 255, 255, 1 )"
-				},
-				"height": 60,
-				"text": "Click me!",
+				"flexProps": {},
+				"height": 126.97712160506337,
+				"top": 15,
 				"usePageVariable": true,
-				"width": null
+				"width": 146.52750267172758
 			}
 		},
 		{
-			"className": ".button",
-			"id": "4608e562",
+			"className": ".imageView",
+			"id": "8306-290c-e1d3-2649",
 			"props": {
 				"children": [],
-				"name": "btnNext",
-				"parent": "d0fa9c62",
-				"text": "Next Page",
+				"name": "imageView2",
+				"parent": "b7a2-ed39-aa75-0440",
 				"usePageVariable": true
 			},
-			"type": "Button",
+			"type": "ImageView",
 			"userProps": {
-				"flexProps": {
-					"marginTop": 10
-				},
-				"font": {
-					"color": "rgba( 255, 255, 255, 1 )"
-				},
-				"height": 60,
-				"text": "Next Page",
+				"flexProps": {},
+				"height": 126.97712160506337,
 				"usePageVariable": true,
-				"width": null
+				"width": 146.52750267172758
+			}
+		},
+		{
+			"className": ".imageView",
+			"id": "7388-8994-0e4d-0c5e",
+			"props": {
+				"children": [],
+				"name": "imageView3",
+				"parent": "b7a2-ed39-aa75-0440",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {},
+				"height": 126.97712160506337,
+				"usePageVariable": true,
+				"width": 146.52750267172758
+			}
+		},
+		{
+			"className": ".imageView",
+			"id": "90a3-f3c2-224c-23f0",
+			"props": {
+				"children": [],
+				"name": "imageView4",
+				"parent": "b7a2-ed39-aa75-0440",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {},
+				"height": 126.97712160506337,
+				"usePageVariable": true,
+				"width": 146.52750267172758
+			}
+		},
+		{
+			"className": ".imageView",
+			"id": "72bd-5bab-17ad-4d18",
+			"props": {
+				"children": [],
+				"name": "imageView5",
+				"parent": "b7a2-ed39-aa75-0440",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {},
+				"height": 126.97712160506337,
+				"usePageVariable": true,
+				"width": 146.52750267172758
+			}
+		},
+		{
+			"className": ".imageView",
+			"id": "b7c7-7577-d236-b317",
+			"props": {
+				"children": [],
+				"name": "imageView6",
+				"parent": "b7a2-ed39-aa75-0440",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {},
+				"height": 126.97712160506337,
+				"usePageVariable": true,
+				"width": 146.52750267172758
+			}
+		},
+		{
+			"className": ".imageView",
+			"id": "2664-7fe4-1c86-1c29",
+			"props": {
+				"children": [],
+				"name": "imageView7",
+				"parent": "b7a2-ed39-aa75-0440",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {},
+				"height": 126.97712160506337,
+				"usePageVariable": true,
+				"width": 146.52750267172758
+			}
+		},
+		{
+			"className": ".imageView",
+			"id": "e1f5-dbab-e1ff-5724",
+			"props": {
+				"children": [],
+				"name": "imageView8",
+				"parent": "b7a2-ed39-aa75-0440",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {},
+				"height": 126.97712160506337,
+				"usePageVariable": true,
+				"width": 146.52750267172758
 			}
 		}
 	]

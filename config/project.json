@@ -87,8 +87,8 @@
 				"playerPath": null
 			},
 			"keys": {
-				"project3DesKey": "",
-				"projectEncryptedKey": ""
+				"project3DesKey": "lZHISnguyAMI3erVbMSsmqzdSTN1jGg6",
+				"projectEncryptedKey": "422x6x+pNNzKnI+T6dU0X3HIrOJUN+NUD1HcfQzpZBJNGSzqIQkdGJbkFfxMn7ut7E6hfIkDM5uHNlZMVllwrFca1+F4fwon3YVaIiCJnGgm46ecnNGqAdLTw920nhQswDBA3ASZvN/AARi9qTnehsTMnGGxwtyAuwuAPSk12Wk="
 			}
 		},
 		"output": {
@@ -102,5 +102,6 @@
 			}
 		},
 		"tempFolder": "output/.tmp"
-	}
+	},
+	"projectID": "e2d91fdc-d85d-464a-a39e-ad57731a0cb0"
 }
