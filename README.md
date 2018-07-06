@@ -3,7 +3,9 @@
 
 >The Studio Create Android & IOS application 
 
-![firstScreen](https://github.com/Burakdemirci/gagstar/blob/develop/ek1.jpg){:height="700px" width="400px"}
+![firstScreen](){:height="700px" width="400px"}
+<img src="https://github.com/Burakdemirci/gagstar/blob/develop/ek1.jpg" width="100" height="100">
+
 
 ![secondScreen_1](https://github.com/Burakdemirci/gagstar/blob/develop/ek2.jpg)
 
