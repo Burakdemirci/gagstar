@@ -1,6 +1,7 @@
 const extend = require("js-base/core/extend");
 const Router = require("sf-core/ui/router");
 const System = require("sf-core/device/system");
+const Image = require('sf-core/ui/image');
 
 // Get generated UI code
 const Page1Design = require("ui/ui_page1");
@@ -25,10 +26,6 @@ const Page1 = extend(Page1Design)(
 function onShow(superOnShow) {
     const page = this;
     superOnShow();
-
-    if (System.OS === "Android") {
-        setTimeout(() => page.btnNext.enabled = true, 300);
-    }
 }
 
 /**
@@ -41,76 +38,76 @@ function onLoad(superOnLoad) {
     superOnLoad();
 
     page.headerBar.leftItemEnabled = false;
-    page.flexlayout.children.btn.onPress = btn_onPress.bind(page);
-    page.btnNext.onPress = btnNext_onPress.bind(page);
+    
+    page.flexLayout1.children.imageView1.image = Image.createFromFile("images://ninegag.png");
+    page.flexLayout1.children.imageView2.image = Image.createFromFile("images://bobiler.png");
+    page.flexLayout1.children.imageView3.image = Image.createFromFile("images://cheezburger.png");
+    page.flexLayout1.children.imageView4.image = Image.createFromFile("images://collagehumor.png");
+    page.flexLayout1.children.imageView5.image = Image.createFromFile("images://funnyordie.png");
+    page.flexLayout1.children.imageView6.image = Image.createFromFile("images://quickmeme.png");    
+    page.flexLayout1.children.imageView7.image = Image.createFromFile("images://memecenter.png"); 
+    page.flexLayout1.children.imageView8.image = Image.createFromFile("images://funnyjunk.png"); 
+    
+    
+    // Image onTouch 
+    page.flexLayout1.children.imageView1.onTouch = image_onPress.bind(page,ninegag);
+    page.flexLayout1.children.imageView2.onTouch = image_onPress.bind(page,bobiler);
+    page.flexLayout1.children.imageView3.onTouch = image_onPress.bind(page,cheezburger);
+    page.flexLayout1.children.imageView4.onTouch = image_onPress.bind(page,collagehumor);
+    page.flexLayout1.children.imageView5.onTouch = image_onPress.bind(page,funnyordie);
+    page.flexLayout1.children.imageView6.onTouch = image_onPress.bind(page,quickmeme);
+    page.flexLayout1.children.imageView7.onTouch = image_onPress.bind(page,memecenter);
+    page.flexLayout1.children.imageView8.onTouch = image_onPress.bind(page,funnyjunk);
+   
 }
 
-function btnNext_onPress() {
+function image_onPress(address) {
     const page = this;
-
-    if (System.OS === "Android") {
-        page.btnNext.enabled = false;
-    }
-    Router.go("page2", {
-        message: "Hello World!"
-    });
+    Router.go("page2",address);
 }
 
-var btnClickCount = 0;
 
-// Gets/sets press event callback for btn
-function btn_onPress() {
-    var myLabelText = "";
-    var myButtonText = "";
+/**
+*  The object of the gags 
+*/
+var ninegag = {
+    name: "9GAG",
+    url : "https://9gag.com/"
+};
 
-    btnClickCount += 1;
+var bobiler = {
+    name: "BOBILER",
+    url : "https://bobiler.org/"
+};
 
-    switch (true) {
-        case btnClickCount == 1:
-            myLabelText = "Well Done! \nYou've clicked the button!";
-            myButtonText = "Click me again!";
-            break;
-        case btnClickCount < 10:
-            myLabelText = "Whoa!\nThat click was " + numberSuffix(btnClickCount) + " time!";
-            myButtonText = "Click again?";
-            break;
-        case btnClickCount < 15:
-            myLabelText = "Feel tired?\nYou can rest your finger now :)";
-            myButtonText = "I'm not tired!";
-            break;
-        default:
-            myLabelText = "Isn't it good?\nEvery clicks count, you've clicked " +
-                numberSuffix(btnClickCount) + " time!";
-            myButtonText = "Click again?";
-            break;
-    }
-
-    // Access lbl & btnNext of page1
-    this.lbl.text = myLabelText;
-    this.flexlayout.children.btn.text = myButtonText;
+var cheezburger = {
+    name  :"cheezburger",
+    url   :"https://www.cheezburger.com/"
 }
 
-// Adds appropriate suffix to given number
-function numberSuffix(number) {
-    var suffix = "th";
+var collagehumor = {
+    name : "collagehumor",
+    url  : "http://www.collegehumor.com/"
+}
 
-    // Let's deal with small numbers
-    var smallNumber = number % 100;
+var funnyordie = {
+    name :"funnyordie",
+    url  : "https://www.funnyordie.com/"
+}
 
-    if (smallNumber < 11 || smallNumber > 13) {
-        switch (smallNumber % 10) {
-            case 1:
-                suffix = "st";
-                break;
-            case 2:
-                suffix = "nd";
-                break;
-            case 3:
-                suffix = "rd";
-                break;
-        }
-    }
-    return number + suffix;
+var quickmeme =  {
+    name:"quickmeme",
+    url : "http://www.quickmeme.com/"
+}
+
+var memecenter = {
+    name : "memecenter",
+    url  : "https://www.memecenter.com/"
+}
+
+var funnyjunk ={
+    name :"funnyjunk",
+    url  :"https://funnyjunk.com/"
 }
 
 module.exports = Page1;

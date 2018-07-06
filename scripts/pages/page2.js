@@ -1,21 +1,21 @@
-const extend = require("js-base/core/extend");
-const Router = require("sf-core/ui/router");
-const Color = require("sf-core/ui/color");
-const System = require("sf-core/device/system");
-
-// Get generated UI code
+/* 
+		You can modify its contents.
+*/
+const extend = require('js-base/core/extend');
 const Page2Design = require('ui/ui_page2');
-
+const Router = require("sf-core/ui/router");
+var webv;
 const Page2 = extend(Page2Design)(
-    // Constructor
-    function(_super) {
-        // Initalizes super class for this page scope
-        _super(this);
-        // Overrides super.onShow method
-        this.onShow = onShow.bind(this, this.onShow.bind(this));
-        // Overrides super.onLoad method
-        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-    });
+  // Constructor
+  function(_super) {
+    // Initalizes super class for this page scope
+    _super(this);
+    // overrides super.onShow method
+    this.onShow = onShow.bind(this, this.onShow.bind(this));
+    // overrides super.onLoad method
+    this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+
+  });
 
 /**
  * @event onShow
@@ -23,17 +23,9 @@ const Page2 = extend(Page2Design)(
  * @param {function} superOnShow super onShow function
  * @param {Object} parameters passed from Router.go function
  */
-function onShow(superOnShow, data) {
-    const page = this;
-    superOnShow();
-
-    page.headerBar.itemColor = Color.BLACK;
-    if (!data)
-        return;
-    console.log(data.message);
-    if (System.OS === "Android") {
-        setTimeout(() => page.btn.enabled = true, 400);
-    }
+function onShow(superOnShow,address) {
+  superOnShow();
+  webv.loadURL(address.url);
 }
 
 /**
@@ -42,19 +34,11 @@ function onShow(superOnShow, data) {
  * @param {function} superOnLoad super onLoad function
  */
 function onLoad(superOnLoad) {
-    const page = this;
-    superOnLoad();
-
-    page.btn.onPress = btn_onPress.bind(page);
-    if (System.OS === "Android")
-        page.btn.enabled = false;
-    page.android.onBackButtonPressed = () => {
-        page.btn.enabled && Router.goBack();
-    };
+  const page = this; 
+  superOnLoad();
+  page.headerBar.leftItemEnabled = true;
+  page.android.onBackButtonPressed = () => { Router.goBack(); };
+  webv= page.webView1;
 }
 
-function btn_onPress() {
-    Router.goBack();
-}
-
-module.exports = Page2;
+module && (module.exports = Page2);
